@@ -1,0 +1,25 @@
+{% include 'default.html' %}
+
+<body>
+     
+    <div id="prediction" style="position: absolute; top:350px;right:5px ;height:200px;width:500px; background-color:lightsteelblue", class="Content-Div">
+        
+        <form method="POST" action='/location'>
+            <!-- <button type="submit" name="search_doctor">x</button> -->
+        <span style="font-family:Georgia, 'Times New Roman', Times, serif, sans-serif;font-size: 15px; color:indigo;
+        position: relative; top:50px">
+        
+            <label for="loca" align="left">Click on Browser Doctors</label><br>
+            <input type="text" list="doc" multiple="multiple" class="form-control" name="Doctors">
+            <datalist id="doc">
+                <option value= "{{doc_list}}">{{doc_list}}</option>
+
+            </datalist>
+        </input>
+        <button type="submit" class="btn btn-primary" name="search_doctor">Find On Map</button>
+        </span>
+        
+        
+    </form>
+    </div>
+    </body>
